@@ -1,0 +1,295 @@
+{
+  "updated": "2026-11-25",
+  "source_document": "JD_Lens_项目完整资料汇总_2026-11-25.md",
+  "source_sections": {
+    "positioning": "1",
+    "workflow_outputs": "3、6",
+    "citation_baseline": "4.2、5.2",
+    "failure_cases": "5.3、6.5",
+    "contribution": "8"
+  },
+  "status": "Figma V0.2演示原型与工作流项目V0.1验证尚未集成、未上线；作品集网页尚未公开部署",
+  "runs": {
+    "id": "E2E-001",
+    "date": "2026-11-24",
+    "business_rounds": 1,
+    "workflow_runs": 7,
+    "decomposition": "解析3次、对比1次、画像1次、差距1次、学习1次",
+    "handoff": "人工传递文本"
+  },
+  "citation_baseline": {
+    "identified": 84,
+    "continuous_matches": 57,
+    "unmatched": 27,
+    "percent": 67.9,
+    "scope": "已识别引文连续匹配；未另行去重，检查器自身去重规则未知；不是准确率或幻觉率"
+  },
+  "screenshots": [
+    {
+      "screenshot_order": 1,
+      "source_file": "用户上传截图1（从原聊天下载）.png",
+      "source_sha256": "cc3c14691497e6a1fbb34656d76e0638b71f4574948a4c140083bad72f3b2236",
+      "source_size_px": [
+        1916,
+        919
+      ],
+      "crop_xyxy": [
+        560,
+        125,
+        1605,
+        915
+      ],
+      "output": "assets/figma-input.webp",
+      "processing": "原图矩形裁切；无损WebP；未重绘或改字",
+      "verification_note": "Figma V0.2岗位输入；演示数据"
+    },
+    {
+      "screenshot_order": 2,
+      "source_file": "image(20261125-050522).png",
+      "source_sha256": "5182c9b2a64663fc59128573b3c288cca45827b270ca5c8243c1b6100dd9581c",
+      "source_size_px": [
+        1916,
+        915
+      ],
+      "crop_xyxy": [
+        560,
+        125,
+        1605,
+        915
+      ],
+      "output": "assets/figma-background.webp",
+      "output_size_px": [
+        1045,
+        790
+      ],
+      "processing": "原图矩形裁切；未重绘、未改字、未补画、未放大；无损WebP编码",
+      "verification_note": "个人背景；截图内为演示画像，不是开发者完整求职画像",
+      "input_variables_verified": []
+    },
+    {
+      "screenshot_order": 3,
+      "source_file": "image(20261125-050542).png",
+      "source_sha256": "180dc4fea4ea8d9f9bf2b1d6753468b31b11add63c1fb4022321b1232f701fb5",
+      "source_size_px": [
+        1919,
+        915
+      ],
+      "crop_xyxy": [
+        563,
+        125,
+        1605,
+        915
+      ],
+      "output": "assets/figma-results.webp",
+      "output_size_px": [
+        1042,
+        790
+      ],
+      "processing": "原图矩形裁切；未重绘、未改字、未补画、未放大；无损WebP编码",
+      "verification_note": "结果/能力洞察；64为演示数字，预计6周为演示计划，不是工作流真实四周生成计划",
+      "input_variables_verified": []
+    },
+    {
+      "screenshot_order": 4,
+      "source_file": "image(20261125-050600).png",
+      "source_sha256": "38b077b662af92b06c8d5f98d37ebc3af18fba64abc4a53a2c30db3b2e76877e",
+      "source_size_px": [
+        1915,
+        912
+      ],
+      "crop_xyxy": [
+        560,
+        289,
+        1605,
+        812
+      ],
+      "output": "assets/figma-priority.webp",
+      "output_size_px": [
+        1045,
+        523
+      ],
+      "processing": "原图矩形裁切；未重绘、未改字、未补画、未放大；无损WebP编码",
+      "verification_note": "学习优先级与特有能力；演示数据",
+      "input_variables_verified": []
+    },
+    {
+      "screenshot_order": 5,
+      "source_file": "image(20261125-050629).png",
+      "source_sha256": "174a1a09451ea525872e75e45e99412974b211793c4499822d348d2a9bd21399",
+      "source_size_px": [
+        1916,
+        917
+      ],
+      "crop_xyxy": [
+        720,
+        260,
+        1440,
+        680
+      ],
+      "output": "assets/figma-loading.webp",
+      "output_size_px": [
+        720,
+        420
+      ],
+      "processing": "原图矩形裁切；未重绘、未改字、未补画、未放大；无损WebP编码",
+      "verification_note": "加载状态；68%为演示进度，不是性能实测",
+      "input_variables_verified": []
+    },
+    {
+      "screenshot_order": 6,
+      "source_file": "image(20261125-050644).png",
+      "source_sha256": "3d67c6c0b81a05c5ed1a5e2a0f487bb390a478dfd2b965f3a1a6770458ada51a",
+      "source_size_px": [
+        1917,
+        914
+      ],
+      "crop_xyxy": [
+        760,
+        290,
+        1410,
+        680
+      ],
+      "output": "assets/figma-failure.webp",
+      "output_size_px": [
+        650,
+        390
+      ],
+      "processing": "原图矩形裁切；未重绘、未改字、未补画、未放大；无损WebP编码",
+      "verification_note": "失败状态；界面明确“原型模拟错误”，不代表工作流真实报错",
+      "input_variables_verified": []
+    },
+    {
+      "screenshot_order": 7,
+      "source_file": "image(20261125-050728).png",
+      "source_sha256": "8e379cdd116f0ae9dbc2ee3d5425c8d77caa1706985b473dce627176684d0989",
+      "source_size_px": [
+        1919,
+        915
+      ],
+      "crop_xyxy": [
+        310,
+        340,
+        1505,
+        520
+      ],
+      "output": "assets/workflow-parse.webp",
+      "output_size_px": [
+        1195,
+        180
+      ],
+      "processing": "原图矩形裁切；未重绘、未改字、未补画、未放大；无损WebP编码",
+      "verification_note": "输入→LLM→代码执行→输出；模型gpt-5；输出LLM text与代码执行result",
+      "input_variables_verified": [
+        "jd_text"
+      ]
+    },
+    {
+      "screenshot_order": 8,
+      "source_file": "image(20261125-050745).png",
+      "source_sha256": "69925c3a6d53d6d092c252e297acfe8467cdcebaf087d4514522d52a96405e48",
+      "source_size_px": [
+        1916,
+        911
+      ],
+      "crop_xyxy": [
+        126,
+        295,
+        1270,
+        540
+      ],
+      "output": "assets/workflow-compare.webp",
+      "output_size_px": [
+        1144,
+        245
+      ],
+      "processing": "原图矩形裁切；未重绘、未改字、未补画、未放大；无损WebP编码",
+      "verification_note": "输入→LLM→输出；模型gpt-5；输出LLM text",
+      "input_variables_verified": [
+        "jd_1",
+        "jd_2",
+        "jd_3"
+      ]
+    },
+    {
+      "screenshot_order": 9,
+      "source_file": "image(20261125-050807).png",
+      "source_sha256": "1c38a4e32e4da9a9a2b7a4d21de6a2f0e19270aff00e94f116e1c4049cace678",
+      "source_size_px": [
+        1919,
+        914
+      ],
+      "crop_xyxy": [
+        244,
+        270,
+        1385,
+        615
+      ],
+      "output": "assets/workflow-profile.webp",
+      "output_size_px": [
+        1141,
+        345
+      ],
+      "processing": "原图矩形裁切；未重绘、未改字、未补画、未放大；无损WebP编码",
+      "verification_note": "输入→LLM→输出；模型gpt-5；输出LLM text；完整真实画像所在右侧面板已裁掉",
+      "input_variables_verified": [
+        "target_direction",
+        "project_experience",
+        "current_skills",
+        "improvement_areas",
+        "weekly_hours",
+        "target_timeline"
+      ]
+    },
+    {
+      "screenshot_order": 10,
+      "source_file": "image(20261125-050824).png",
+      "source_sha256": "a7118b7d89fabb2e15470b4184ddb6fe51196079c9f1eba2dfda3b7ff0b0b7d4",
+      "source_size_px": [
+        1919,
+        912
+      ],
+      "crop_xyxy": [
+        190,
+        275,
+        1335,
+        480
+      ],
+      "output": "assets/workflow-gap.webp",
+      "output_size_px": [
+        1145,
+        205
+      ],
+      "processing": "原图矩形裁切；未重绘、未改字、未补画、未放大；无损WebP编码",
+      "verification_note": "输入→LLM→输出；模型gpt-5；输出LLM text",
+      "input_variables_verified": [
+        "jd_comparison",
+        "personal_profile"
+      ]
+    },
+    {
+      "screenshot_order": 11,
+      "source_file": "image(20261125-050843).png",
+      "source_sha256": "d50e1878885d443c55e63cd558eecb2c9409626989695b73b4374e4c32a8ecc9",
+      "source_size_px": [
+        1912,
+        916
+      ],
+      "crop_xyxy": [
+        131,
+        315,
+        1445,
+        515
+      ],
+      "output": "assets/workflow-plan.webp",
+      "output_size_px": [
+        1314,
+        200
+      ],
+      "processing": "原图矩形裁切；未重绘、未改字、未补画、未放大；无损WebP编码",
+      "verification_note": "输入→LLM→输出；模型gpt-5；输出LLM text；右侧个人约束已裁掉",
+      "input_variables_verified": [
+        "gap_analysis"
+      ]
+    }
+  ]
+}

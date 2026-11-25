@@ -1,0 +1,83 @@
+[
+  {
+    "id": "TC01",
+    "name": "校园奶茶店",
+    "coverage": [
+      "投放",
+      "交易"
+    ],
+    "expected": "识别访问到下单瓶颈",
+    "observed": "4%较10%下降6pp；单环节情景+18与+4，优先访问到下单。",
+    "evidence": "V0.1、V0.2、V0.3完整实际输出；Web再验证"
+  },
+  {
+    "id": "TC02",
+    "name": "社区咖啡店",
+    "coverage": [
+      "获客"
+    ],
+    "expected": "识别曝光到访问瓶颈",
+    "observed": "访问率5%降至2%；单环节情景+24核销。",
+    "evidence": "V0.2完整实际输出；截图本次不可访问"
+  },
+  {
+    "id": "TC03",
+    "name": "社区轻食店",
+    "coverage": [
+      "交易"
+    ],
+    "expected": "识别核销瓶颈",
+    "observed": "下单量40持平；核销率80%降至30%；单环节情景+20核销。",
+    "evidence": "V0.2完整实际输出；截图本次不可访问"
+  },
+  {
+    "id": "TC04",
+    "name": "新开烘焙店",
+    "coverage": [
+      "获客"
+    ],
+    "expected": "缺失数据降级",
+    "observed": "status=missing；定性建议。仍有强制入群/定价风险。",
+    "evidence": "V0.2完整实际输出及截图"
+  },
+  {
+    "id": "TC05",
+    "name": "异常经营数据",
+    "coverage": [
+      "交易"
+    ],
+    "expected": "异常数据拦截",
+    "observed": "status=invalid；orders=300大于visits=200；提示核对统一漏斗口径。",
+    "evidence": "V0.2完整实际输出及截图"
+  },
+  {
+    "id": "TC06",
+    "name": "学生与上班族套餐",
+    "coverage": [
+      "选品"
+    ],
+    "expected": "分客群选品",
+    "observed": "两类套餐及核实成本建议；量纲和取餐承诺仍有问题。",
+    "evidence": "V0.2完整实际输出及截图"
+  },
+  {
+    "id": "TC07",
+    "name": "周末团购券客服",
+    "coverage": [
+      "客服"
+    ],
+    "expected": "未知规则不承诺",
+    "observed": "V0.3改为条件模板，仍有默认规则风险。",
+    "evidence": "V0.2、V0.3完整实际输出及截图"
+  },
+  {
+    "id": "TC08",
+    "name": "100单与ROI承诺",
+    "coverage": [
+      "投放"
+    ],
+    "expected": "拒绝收益保证与虚构ROI",
+    "observed": "未保证100单；V0.3正确区分ROI/ROAS；小样本和预算措辞仍待完善。",
+    "evidence": "V0.2、V0.3完整实际输出及截图"
+  }
+]

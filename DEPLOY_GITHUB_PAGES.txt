@@ -1,0 +1,172 @@
+双项目作品集 GitHub Pages 部署教程
+适用内容：StorePilot 店策AI + JD Lens 统一静态作品集
+核对日期：2026-11-25
+
+这份教程帮助你用浏览器上传作品集并取得公开首页链接，无需安装 Git 或编写代码。交付 ZIP 是待上传文件，拿到 ZIP 本身不代表网站已经上线。报名截止时间以官方页面为准。
+
+一、先解压，确认要上传哪一层
+
+1. 下载统一作品集 ZIP，右键选择“全部解压缩”。不要直接把 ZIP 上传到仓库后就开启 Pages：GitHub Pages 不会自动把你上传的 ZIP 解压成网站。
+
+2. 打开解压后的文件夹。正确的“网站根目录”应当同时看到：
+
+   index.html
+   assets/
+       site.css
+   storepilot/
+       index.html
+       ……StorePilot 的 PDF、截图、评测证据等原有文件
+   jd-lens/
+       index.html
+       ……JD Lens 的 PDF、截图、证据索引等原有文件
+   .nojekyll
+   ……可能还有部署说明、README 等交付文件
+
+   最重要的关系：总首页 index.html 与 storepilot、jd-lens 两个文件夹处于同一层。
+
+3. 如果解压工具额外生成了一个外层文件夹，进入它，直到看见上述结构。上传时选中这一层的内容，不要把这个外层文件夹整体再包一层上传。
+
+4. 保留两个项目的完整文件夹和文件名。不要只挑三个 index.html，不要把两个项目中的 assets 文件夹合并，不要随意重命名 PDF 或截图；页面使用相对路径寻找它们。
+
+5. 只上传交付的公开展示目录。不要额外加入私人原始资料、完整个人画像、账户截图、密钥、密码、工作目录 work 或其他临时文件。
+
+二、新建一个公开仓库
+
+1. 打开 https://github.com/ 并登录自己的账号。登录、验证码与账号确认由你本人完成。
+
+2. 点击页面右上角“+”，选择 New repository（新建仓库）。
+
+3. 按以下方式填写：
+   Owner：选择你自己的账号。
+   Repository name：ai-product-portfolio
+   Description：可填“AI 产品作品集：StorePilot 与 JD Lens”，也可留空。
+   Visibility：选择 Public（公开）。本教程采用个人公开仓库的发布方式。
+   Add a README：可以勾选，方便创建后直接看到文件列表。
+   .gitignore：不需要额外选择。
+   License：不必为了部署强行选择开源许可，可以先保持不添加。
+
+4. 点击 Create repository（创建仓库）。
+
+   若提示名称已被占用，说明你已有同名仓库；可检查后使用原仓库，或换一个名称。若换名，最后网站链接中的仓库名也会随之改变。
+
+三、上传解压后的完整网站内容
+
+1. 进入仓库的 Code 页面，也就是显示文件列表的页面。
+
+2. 点击 Add file → Upload files（添加文件 → 上传文件）。如果创建的是空仓库，也可以点击页面上的 uploading an existing file（上传现有文件）入口。
+
+3. 在电脑文件管理器中打开第一部分确认的“网站根目录”。选中里面的文件和文件夹，拖到 GitHub 上传区域。请把 assets、storepilot、jd-lens 作为完整文件夹拖入，保留内部层级。
+
+   需要选择文件时也可用 choose your files，但不要为了使用文件选择窗口而把子文件夹内容摊平上传。拖入文件夹更容易保留目录结构。
+
+4. 等待文件上传列表出现。检查列表中的相对路径应包括：
+   index.html
+   assets/site.css
+   storepilot/index.html
+   jd-lens/index.html
+
+   错误示例：Dual_Project_Portfolio/index.html。这里多出的外层目录会让发布根目录找不到首页。
+
+5. 如果 GitHub 提示一次上传文件数过多，分几次完成：先上传根目录文件与 assets，再分别上传完整 storepilot 和完整 jd-lens 文件夹。每一次都从仓库根目录进入 Upload files；不要误入某个项目文件夹后再上传另一个项目。浏览器上传目前每批最多 100 个文件、单个文件不超过 25 MiB。
+
+6. 在提交说明中输入 Upload AI product portfolio。
+
+7. 如果页面提供 Commit directly to the main branch（直接提交到 main），可选择它并完成提交。若界面要求创建分支，按提示选择 Propose changes、创建 Pull request，检查文件后点击 Merge pull request 并确认合并，让文件进入 main。只停留在上传预览或未合并的分支中，Pages 不会发布这些新文件。
+
+8. 返回 Code 页面，确认分支选择器是 main，并且根目录已经有 index.html、assets、storepilot、jd-lens。
+
+9. 关于 .nojekyll：文件管理器可能隐藏这个以点开头的文件。尽量一并上传；本包使用普通目录名，漏掉它一般不会影响这些页面，但仍建议补齐。补齐方法是 Add file → Create new file，文件名输入 .nojekyll，正文可写 Static portfolio assets.，然后提交到 main。注意不要写成 .nojekyll.txt。
+
+四、开启 GitHub Pages
+
+1. 在这个仓库顶部打开 Settings（设置）。窄屏时可能需要先展开菜单才能看到 Settings。
+
+2. 在左侧菜单找到 Pages。
+
+3. 找到 Build and deployment（构建与部署）区域：
+   Source：选择 Deploy from a branch（从分支部署）。
+   Branch：选择 main。
+   Folder：选择 /(root)。
+
+   本包已经是可发布的静态网页，因此这里用根目录发布；不需要改成 /docs，也不需要另建构建工作流。
+
+4. 点击 Save。
+
+5. 打开仓库顶部 Actions，找到此次 Pages 构建与部署任务，等待完成。即使选择的是“从分支部署”，GitHub 仍会显示相应的发布任务。
+
+6. 任务显示成功后，返回 Settings → Pages，刷新页面，点击 Visit site（访问网站），或复制该页面给出的公开地址。
+
+   如果还在排队或执行，先等待；不要把尚未成功打开的预测地址当作已上线成果。
+
+五、认清最终应该填写的链接
+
+如果你的用户名是 YOUR-USERNAME，仓库名是 ai-product-portfolio，默认网站地址为：
+
+   https://YOUR-USERNAME.github.io/ai-product-portfolio/
+
+把 YOUR-USERNAME 替换成真实 GitHub 用户名。这个示例只是地址格式，不是本次已发布的网址。最终以 Pages 页面给出的地址和实际打开结果为准。
+
+仓库页面与网站页面不同：
+   仓库：https://github.com/YOUR-USERNAME/ai-product-portfolio
+   网站：https://YOUR-USERNAME.github.io/ai-product-portfolio/
+
+报名作品集一栏应填写能够直接打开总首页的“网站”链接。
+
+若仓库专门命名为“你的用户名.github.io”，它属于用户站点，默认首页地址通常是 https://你的用户名.github.io/，不再附加这个仓库名。本教程使用普通项目仓库 ai-product-portfolio，不需要改成用户站点仓库。若你已有个人站点，也不要随意覆盖它。
+
+六、报名之前做一次访问验收
+
+请使用复制出来的公开网站链接，完成下面检查。不能仅以本机双击 HTML 成功或 Actions 变绿作为全部验收结果。
+
+1. 用无痕窗口打开总首页，确认无需登录即可浏览。
+2. 用手机打开同一链接，确认文字和按钮可读、没有明显横向溢出。
+3. 从首页进入 StorePilot 详情页，确认样式与截图正常。
+4. 点击 StorePilot 的 PDF，确认可以阅读或下载；再打开评测证据入口，抽查其中的 CSV、完整输出等资料。
+5. 返回总首页，进入 JD Lens 详情页，确认样式、截图放大和 PDF 入口正常；打开证据索引。
+6. 抽查 PDF 中保留的链接，确认跳转到预期资源。若出现 file:///、电脑盘符或 /mnt/data，一般表示仍指向某台电脑的本地文件，需要修复；不能用这个地址作为公开证据链接。
+7. 从项目详情或浏览器返回首页，确认两项目入口都可反复进入。
+
+静态网页与 CSV 等文件无需观众登录；PDF 的“下载”按钮也可能在浏览器中直接打开 PDF，这两种表现均可接受。
+
+本包已把 PDF 内原本指向制作电脑的链接改为相对链接。PDF 图文本身可独立阅读；相对附件链接依赖项目目录。若只把 PDF 单独下载到其他文件夹，或阅读器不跟随相对附件链接，请从项目网页或证据附录打开对应资料。公开发布后仍应抽查实际点击效果。
+
+七、完成报名时怎么用
+
+1. 确认以上访问验收通过后，复制公开总首页网址，粘贴到报名表的作品集链接一栏。
+2. 若报名表另有文件上传入口，再按表单要求上传相应 PDF；不要用 ZIP 下载链接替代公开网页链接。
+3. 以官方报名页面的要求和截止时间为准。提交后保留成功提示或确认凭证。
+
+如果临近截止仍无法稳定打开网页，优先按官方接受的方式提交能够公开访问的备用材料入口，不要仅因研究部署流程耽误报名。备用文档或附件也需要用无痕窗口检查权限。
+
+八、常见问题
+
+问：打开网站是 404，先检查哪里？
+答：依次检查：Actions 是否完成；Pages 是否选 main 与 /(root)；main 根目录是否真的存在小写 index.html；文件是否误放在额外的外层文件夹；网址是否包含正确的仓库名。若文件仅在未合并分支，先完成合并。修正后等待新一轮发布完成，再刷新公开链接。
+
+问：首页正常，但项目页、图片或 PDF 是 404？
+答：检查对应项目文件夹是否整包上传、文件名大小写是否一致、是否误改名，以及文件是否误传到别的目录。GitHub 发布后的路径区分大小写。“电脑上可以打开”不代表大小写已经正确。请保持交付包中的相对目录。
+
+问：页面没有样式，只有文字？
+答：先检查根目录 assets/site.css 和项目自己的样式文件是否存在，再确认 HTML 与资源没有被分开移动。补传后等 Actions 完成，用无痕窗口或强制刷新查看。
+
+问：为什么链接里有 /ai-product-portfolio/？
+答：这是普通项目站点的仓库路径，属于正常现象。不要把它删掉；两个项目的相对链接也需要在这一层下运行。
+
+问：找不到 Pages，或没有 main 可选？
+答：确认你在仓库的 Settings 页面并有管理权限；若仓库仍为空，先完成文件提交。若实际默认分支不是 main，则选择存放完整网站文件的那个分支；确保发布文件夹仍为 /(root)。本教程采用 Public 仓库，避免因账号方案而无法使用私人仓库 Pages。
+
+问：保存了设置，但 Actions 失败？
+答：打开失败任务查看具体错误，先检查发布分支与目录、文件是否齐全、邮箱是否完成验证。不要反复创建新仓库或改成不熟悉的发布方式。保留报错信息再处理即可。
+
+问：以后改作品集怎么办？
+答：在原仓库更新对应文件并提交到同一发布分支，等待新的 Actions 发布完成。只要用户名和仓库名不变，总首页链接通常可以继续使用；更新后再次验收入口、PDF 与证据资料。
+
+官方参考资料（已核对上传入口、发布源设置和网址规则）：
+创建仓库：
+https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository
+网页上传文件：
+https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository
+设置 Pages 发布源：
+https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+Pages 类型与默认地址：
+https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages

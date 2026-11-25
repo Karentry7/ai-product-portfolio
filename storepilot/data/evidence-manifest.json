@@ -1,0 +1,242 @@
+{
+  "product": "StorePilot 店策AI",
+  "date": "2026-11-25",
+  "prompt_version": "V0.3",
+  "app_title_version": "V0.1",
+  "studio_runs": 12,
+  "studio_successful_execution": 12,
+  "quality_pass_rate": null,
+  "total_studio_tokens": 74012,
+  "web_app_functional_checks": 1,
+  "web_check_has_time_tokens": false,
+  "public_link_verified": false,
+  "real_merchant_validation": false,
+  "runs": [
+    {
+      "id": "E2E-001",
+      "version": "V0.1",
+      "scenario": "奶茶店首次端到端",
+      "seconds": 65.778,
+      "tokens": 8080,
+      "screenshot": null
+    },
+    {
+      "id": "TC01-R",
+      "version": "V0.2",
+      "scenario": "奶茶店下单转化",
+      "seconds": 53.595,
+      "tokens": 6744,
+      "screenshot": null
+    },
+    {
+      "id": "TC02",
+      "version": "V0.2",
+      "scenario": "咖啡店获客访问",
+      "seconds": 74.973,
+      "tokens": 6330,
+      "screenshot": null
+    },
+    {
+      "id": "TC03",
+      "version": "V0.2",
+      "scenario": "轻食店核销",
+      "seconds": 68.642,
+      "tokens": 6807,
+      "screenshot": null
+    },
+    {
+      "id": "TC04",
+      "version": "V0.2",
+      "scenario": "新店缺失数据",
+      "seconds": 46.544,
+      "tokens": 4953,
+      "screenshot": "image(20261125-091118).png"
+    },
+    {
+      "id": "TC05",
+      "version": "V0.2",
+      "scenario": "异常数据处理",
+      "seconds": 34.348,
+      "tokens": 4515,
+      "screenshot": "image(20261125-091352).png"
+    },
+    {
+      "id": "TC06",
+      "version": "V0.2",
+      "scenario": "选品与套餐",
+      "seconds": 44.587,
+      "tokens": 5161,
+      "screenshot": "image(20261125-091604).png"
+    },
+    {
+      "id": "TC07",
+      "version": "V0.2",
+      "scenario": "客服规则未知",
+      "seconds": 47.16,
+      "tokens": 5268,
+      "screenshot": "image(20261125-091807).png"
+    },
+    {
+      "id": "TC08",
+      "version": "V0.2",
+      "scenario": "广告收益承诺",
+      "seconds": 91.716,
+      "tokens": 7194,
+      "screenshot": "image(20261125-092302).png"
+    },
+    {
+      "id": "TC01-R2",
+      "version": "V0.3",
+      "scenario": "奶茶核心诊断回归",
+      "seconds": 44.666,
+      "tokens": 7188,
+      "screenshot": "image(20261125-102334).png"
+    },
+    {
+      "id": "TC07-R",
+      "version": "V0.3",
+      "scenario": "客服简洁性回归",
+      "seconds": 17.841,
+      "tokens": 4611,
+      "screenshot": "image(20261125-102848).png"
+    },
+    {
+      "id": "TC08-R",
+      "version": "V0.3",
+      "scenario": "广告指标回归",
+      "seconds": 45.952,
+      "tokens": 7161,
+      "screenshot": "234a2863-a893-45cc-9c42-04d87ae80fa0.png"
+    }
+  ],
+  "evidence_scope": {
+    "recovered_studio_screenshots": 8,
+    "unrecovered_studio_screenshots": [
+      "E2E-001",
+      "TC01-R",
+      "TC02",
+      "TC03"
+    ],
+    "publication_menu_partial_canvas_screenshots": 1,
+    "web_app_screenshots": 1,
+    "full_four_node_canvas_screenshot": false,
+    "recovered_full_run_outputs": 13
+  },
+  "files": [
+    {
+      "path": "assets/evidence/234a2863-a893-45cc-9c42-04d87ae80fa0.png",
+      "sha256": "05ac357656d84babba8044548a40ecb119ce36e22a279260c324add2405c1260",
+      "bytes": 66285
+    },
+    {
+      "path": "assets/evidence/image(20261125-091118).png",
+      "sha256": "5724b650c20cf77191fd4c7797bf2a27bc32e6a072c1b46c9c4bc8f07eb2b248",
+      "bytes": 65453
+    },
+    {
+      "path": "assets/evidence/image(20261125-091352).png",
+      "sha256": "2c9543dd23fd10604313788ba6c55e4d43c308c647e485114decef1f186d312a",
+      "bytes": 64216
+    },
+    {
+      "path": "assets/evidence/image(20261125-091604).png",
+      "sha256": "fae372077c790c70bd9cc12480fbfd103749de63102d1137f3e2bd0005cc2e2d",
+      "bytes": 62653
+    },
+    {
+      "path": "assets/evidence/image(20261125-091807).png",
+      "sha256": "668f71f06eb7a24150edcf1c2695fd2af972383d36bd788a65c1c95f8f2caf35",
+      "bytes": 63933
+    },
+    {
+      "path": "assets/evidence/image(20261125-092302).png",
+      "sha256": "559512d1937b987d679bee245ee3e4c5afcb78a4aa1363ab1ebe9f12dfdc86f5",
+      "bytes": 65800
+    },
+    {
+      "path": "assets/evidence/image(20261125-102334).png",
+      "sha256": "3509e7bb75cd03358fe4f00a236b83610252d49a02de21b30c721fd58efed9d4",
+      "bytes": 66358
+    },
+    {
+      "path": "assets/evidence/image(20261125-102848).png",
+      "sha256": "d9ce5e88d5d9ba789bf6689f054531bbe3fcb5785616c3f0cbb07ac27bcc147b",
+      "bytes": 61722
+    },
+    {
+      "path": "assets/evidence/image(20261125-103150).png",
+      "sha256": "3bfb58fdc00dbd2fb0db78e0f043382f66d07c14a11293d7ebc6f326d5910a78",
+      "bytes": 164066
+    },
+    {
+      "path": "assets/evidence/image(20261125-103622).png",
+      "sha256": "45464742ec0811d22e1d170cfe9ef8c9b5f2655333c0cb7b96a4b1fbc19778ad",
+      "bytes": 213462
+    },
+    {
+      "path": "outputs/E2E-001.txt",
+      "sha256": "a67fe77bdb7352938fb37d533ac6559005a9f259c67b98022830299280889913",
+      "bytes": 10258
+    },
+    {
+      "path": "outputs/TC01-R.txt",
+      "sha256": "c33ce34922f342b556ee4c6a529b5f70216d6cdfd682ff0a7d94b319aca1799a",
+      "bytes": 6522
+    },
+    {
+      "path": "outputs/TC01-R2.txt",
+      "sha256": "8c9ea58ca5d36ca55f701b770f52287f1f74ef4eee86313a300f72aa45ab66bf",
+      "bytes": 6372
+    },
+    {
+      "path": "outputs/TC02.txt",
+      "sha256": "77919289609d58f1f6351ba503dcb8b374c8509061505bdb748f9614a3109c9f",
+      "bytes": 5500
+    },
+    {
+      "path": "outputs/TC03.txt",
+      "sha256": "b9910bcdaa2c84adb77422d2c97ea5dfa20a623246059fad9545b9c45cba1aba",
+      "bytes": 6433
+    },
+    {
+      "path": "outputs/TC04.txt",
+      "sha256": "3a2198b84f988d52bc61074eea5309ad009eed3a8e1970f29f8326d65595b8ae",
+      "bytes": 3701
+    },
+    {
+      "path": "outputs/TC05.txt",
+      "sha256": "6c1288dbe3a2080639dfb3ddc2644414295d15c084f4a421e7cff52ada5ed6bb",
+      "bytes": 4132
+    },
+    {
+      "path": "outputs/TC06.txt",
+      "sha256": "29e7853e1d531b85d1e0bb3729a9efcbe520862d4e99d126d0d5acdfe39c8c12",
+      "bytes": 4536
+    },
+    {
+      "path": "outputs/TC07-R.txt",
+      "sha256": "43e6d8881b86d7b02c4262d9241d50a2b186ce5da4b915a9f7dd495a4bd8fac1",
+      "bytes": 1213
+    },
+    {
+      "path": "outputs/TC07.txt",
+      "sha256": "d3dc16b0db8126813ba5fbcdc5ace14ebdd9995f29fcb8ee6bdf8b8f800e739a",
+      "bytes": 4979
+    },
+    {
+      "path": "outputs/TC08-R.txt",
+      "sha256": "1f8daf1ad53a5898e68ce069becbb1ea013564856e6261748973e3069199b606",
+      "bytes": 6906
+    },
+    {
+      "path": "outputs/TC08.txt",
+      "sha256": "19c38cb25ce467ab7695ca69dd9a717268dfbbcc514c8b87a8f1b113fd9ba59e",
+      "bytes": 7416
+    },
+    {
+      "path": "outputs/WEB-001.txt",
+      "sha256": "113e0856f4fb4a75ba387198deab961a2596e99a1fde34ad53dfcd7df6f74477",
+      "bytes": 6251
+    }
+  ]
+}
